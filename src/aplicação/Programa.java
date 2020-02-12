@@ -10,6 +10,7 @@ public class Programa {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		double saldo;
 
 		System.out.println("Abrir conta ");
 		System.out.println("Digite o numero da conta: ");
@@ -32,11 +33,24 @@ public class Programa {
 		}
 		if (resp == resp1) {
 			System.out.println("digite o valor do depósito: ");
-			double saldo = sc.nextDouble();
+			saldo = sc.nextDouble();
 			cont.deposito(saldo);
-		} else if (resp == resp2) {};
+		} else if (resp == resp2) {
+		}
+		;
 
 		System.out.println(cont.toString());
+		
+		System.out.println("Valor de depósito");
+		saldo = sc.nextDouble();
+		cont.deposito(saldo);
+		System.out.println(cont.toString());
+		
+		System.out.println("Valor de Saque: ");
+		saldo = sc.nextDouble();
+		cont.saque(saldo);
+		System.out.println(cont.toString());
+		
 
 		sc.close();
 	}
